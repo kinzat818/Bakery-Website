@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "lobster", sans-serif;
+}
+body {
+  background-color: #2d2d2d;
+}
+/* header start */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 5%;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+.logo {
+  font-size: 36px;
+  color: white;
+  font-weight: 600;
+}
+.logo span {
+  color: #705d4a;
+  text-shadow: 0 0.1rem 0.1rem rgb(0, 0, 0, 0.2);
+}
+.navlist {
+  display: flex;
+}
+.navlist li a {
+  font-size: 18px;
+  color: #705d4a;
+  font-weight: 500;
+  margin-left: 10px;
+  border-radius: 6px;
+  padding: 8px;
+  transition: all 0.5s;
+}
+.navlist li a:hover {
+  background-color: #705d4a;
+  color: white;
+}
+.menu-icon {
+  font-size: 26px;
+  color: #705d4a;
+  z-index: 10001;
+  display: none;
+  cursor: pointer;
+}
+.top-icon i {
+  font-size: 23px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#icon1 {
+  color: #705d4a;
+}
+#icon2 {
+  color: white;
+}
+
+header.stickly {
+  background-color: #1c1b1a;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding: 16px 5%;
+}
+
+@media (max-width: 950px) {
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 255px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #705d4a;
+    transition: all 0.5s ease;
+  }
+  .navlist li a {
+    color: white;
+    display: block;
+    padding: 17px;
+    font-size: 22px;
+  }
+  .navlist.active {
+    right: 0;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    padding: 15px 4%;
+  }
+}
+@media (max-width: 1030px) {
+  header {
+    padding: 16px 0%;
+  }
+}
+/* header end */
+
+/* cake sec start */
+.cakes {
+  text-align: center;
+}
+.cake {
+  /* background-color: #1c1b1a; */
+  padding: 100px 12.5% 40px;
+  transition: all 0.5s ease;
+  margin-left: 20px;
+  /* text-align: center; */
+}
+
+.cake .card-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  gap: 0.9rem;
+  margin-top: 30px;
+}
+.cake .card-content .row {
+  width: 100%;
+  padding: 10px;
+  background-color: #705d4a;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.cake .card-content .row:hover {
+  background-color: #fff;
+}
+.cake .img {
+  text-align: center;
+}
+.cake .img img {
+  width: 200px;
+  height: 180px;
+}
+
+.main-text h3 {
+  color: white;
+}
+.cake .crad-body h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: black;
+}
+.cake .crad-body p {
+  font-size: 13px;
+  margin-top: 5px;
+  color: black;
+}
+.cake .crad-body i {
+  margin-top: 6px;
+  color: orange;
+  font-size: 13px;
+  margin-left: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+.cake .crad-body h5 {
+  font-size: 16px;
+  color: black;
+  margin-top: 5px;
+}
+.cake .crad-body h5 button {
+  float: right;
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+.cake .crad-body h5 button a {
+  color: white;
+}
+
+.cake .crad-body h5 button a ::before {
+  color: white;
+}
+.cake-btn {
+  margin-top: 5px;
+  margin-left: 190px;
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.cake-btn a {
+  color: black;
+}
+
+.cake-btn:hover {
+  background-color: #705d4a;
+  color: white;
+}
+.cake-btn a::before {
+  color: black;
+}
+
+@media (max-width: 920px) {
+  .cake .card-content {
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  }
+}
+@media (max-width: 1200px) {
+  .cake {
+    padding: 100px 10% 100px;
+  }
+}
+@media (max-width: 1030px) {
+  .cake {
+    padding: 100px 6% 100px;
+  }
+}
+@media (max-width: 951px) {
+  .cake {
+    padding: 100px 12% 100px;
+    height: auto;
+  }
+}
+/* cake sec end */
+
+/* footer section start */
+*/ #footer {
+  width: 100%;
+  background-color: #1c1b1a;
+}
+
+#footer h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.footer-content {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.footer-content p {
+  color: #fff;
+  font-weight: 550;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.social-links i {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #fff;
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.social-links i:hover {
+  background-color: #70564a;
+  color: #fff;
+}
+
+.footer-bottom-content {
+  text-align: center;
+  background-color: #1c1b1a;
+}
+.footer-bottom-content p {
+  color: #fff;
+  font-size: 15px;
+}
+.footer-bottom-content p a {
+  color: #70564a;
+  font-weight: 600;
+}
+
+/* footer section end */
